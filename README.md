@@ -34,5 +34,8 @@ let number1: number;
 number1 = 2;
 ```
 
+## Function type
+
+Use arrow function syntax.
 
 
