@@ -38,4 +38,7 @@ number1 = 2;
 
 Use arrow function syntax.
 
+## never type
+
+Use with error throwing function's return type, because once throwing error, application crashes, nothing should be returned.
 
