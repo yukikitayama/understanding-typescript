@@ -42,3 +42,43 @@ Use arrow function syntax.
 
 Use with error throwing function's return type, because once throwing error, application crashes, nothing should be returned.
 
+## Compiler
+
+User`tsc FILE_NAME.ts -w` or `tsc FILE_NAME.ts --watch`. Once saving the file, compiling TS file into JS file starts.
+
+Run `tsc --init` once in a project folder to create `tsconfig.json` file to tell that this project is managed by TypeScript.
+
+With `tsconfig.json`, running `$ tsc` will compile all the TypeScript files, and `$ tsc -w` will compile any TypeScript files once they are saved with new changes.
+
+## tsconfig.json
+
+It makes sense to add the following, because we don't wanna touch third party TypeScript code and it also slows down our compilation. But this is default. It's just making explicit.
+
+```
+  "exclude": [
+    "node_modules"
+  ]
+```
+
+If we use `"include"`, we need to include ALL the files that we want to compile.
+
+Complied `include` - `exclude` (minus) files.
+
+`lib`
+
+```
+"lib": [
+  "dom",
+  "es6",
+  "dom.iterable",
+  "scripthost"
+],  
+```
+
+`"sourceMap": true` allows us to debug TypeScript code in browser.
+
+## Visual studio code
+
+`Ctrl + Space` to get auto completion.
+
+
