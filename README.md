@@ -77,8 +77,64 @@ Complied `include` - `exclude` (minus) files.
 
 `"sourceMap": true` allows us to debug TypeScript code in browser.
 
+## JavaScript
+
+`let` and `const` are **block scope** in `{ }`. These are available only in the block we define or the lower blocks.
+
+When a function body has only one expression, `const add = (a: number, b: number) => a + b;` You can omit curly braces, and result of the expression is automatically returned. Always with implicit return statement.
+
+Adding types to one line arrow function
+
+`const printOutput: (a: number | string) => void = output => console.log(output);`
+
+**Spread operator** pulls out all the elements of array and object
+
+```
+const hobbies = ['Sports', 'Cooking'];
+const activeHobbies = ['Hiking', ...hobbies];
+```
+
+```
+const person = {
+  name: "Yuki",
+  age: 33
+};
+
+// perfect copy, not sharing same memory 
+const copiedPerson = { ...person };
+```
+
+**Rest parameter** unlimited amount of parameters for function
+
+```typescript
+// 0 is starting value
+const add = (...numbers: number[]) => {
+  return numbers.reduce((curResult, curValue) => {
+    return curResult + curValue;
+  }, 0)
+};
+const addedNumbers = add(5, 10, 2, 3.7);
+```
+
+**Array desctructuring** below `hobby1` is string, but `remainingHobbie` is array. Desctructuring doesn't change the original array. Below `hobbies` array still hold values after destructuring.
+
+```
+const hobbies = ['tennis', 'cooking', 'coding', 'camping'];
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+```
+
+**Object destructuing** pulls out the key value pair and store in the **same key name** constant and value are saved in them. But you can overwrite the original key name with a new name by `:` when object destructuring. `old_name: new_name`
+
+```typescript
+const person = {
+  firstName: 'Yuki',
+  age: 33
+}
+const {firstName: userName, age} = person; 
+console.log(userName, age); 
+```
+
 ## Visual studio code
 
 `Ctrl + Space` to get auto completion.
-
 
