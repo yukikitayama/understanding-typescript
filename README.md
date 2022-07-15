@@ -42,6 +42,16 @@ Use arrow function syntax.
 
 Use with error throwing function's return type, because once throwing error, application crashes, nothing should be returned.
 
+## Class
+
+`protected` keyword to property of a class is used to make property accessible from inside the class or any other classes which extend the base class.
+
+**Getter** needs to `return` something. Put `get` in front of a method. When executing the getter, **no parenthesis** as a property.
+
+**Setter**. Put `set` in front of a method. When executing the setter, no need to execute like a method with parenthesis. Access it like a property, no parenthesis, use `=` to assign a value.
+
+**Static** methods and properties allow us to use the methods and properties without making the instance of a class, useful for utility functions. Put `static` in front of a method. In practice, if you make an instance of the class, static property or static method are not available. You cannot even use it within a class method. If you wanna access, put class name in front of the static property or method.
+
 ## Compiler
 
 User`tsc FILE_NAME.ts -w` or `tsc FILE_NAME.ts --watch`. Once saving the file, compiling TS file into JS file starts.
