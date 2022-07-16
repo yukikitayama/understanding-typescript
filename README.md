@@ -52,6 +52,14 @@ Use with error throwing function's return type, because once throwing error, app
 
 **Static** methods and properties allow us to use the methods and properties without making the instance of a class, useful for utility functions. Put `static` in front of a method. In practice, if you make an instance of the class, static property or static method are not available. You cannot even use it within a class method. If you wanna access, put class name in front of the static property or method.
 
+### Singleton
+
+Put `private` in front of `constructor()`. Cannot use `new` to instantiate a class.
+
+### Interface
+
+Allow us to implement in a class. Share functionalities or structures among classes. Interface doesn't have implementation details. Abstract class has concrete implementations and overwriting parts.
+
 ## Compiler
 
 User`tsc FILE_NAME.ts -w` or `tsc FILE_NAME.ts --watch`. Once saving the file, compiling TS file into JS file starts.
