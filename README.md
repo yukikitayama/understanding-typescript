@@ -60,6 +60,20 @@ Put `private` in front of `constructor()`. Cannot use `new` to instantiate a cla
 
 Allow us to implement in a class. Share functionalities or structures among classes. Interface doesn't have implementation details. Abstract class has concrete implementations and overwriting parts.
 
+#### Interface vs. class
+
+Interface can inherit multipled interfaces, but class can inherit only one interface.
+
+## Optional parameter and property
+
+- To create optional parameter, add `?` behind a parameter in a function argument definition.
+- To create optional property, add `?` behind a property name like `parameter?` in a interface or class
+- Optional method syntax is `methodName?()` by adding `?` between name and parenthesis.
+
+## Type guard
+
+- For **union type**
+
 ## Compiler
 
 User`tsc FILE_NAME.ts -w` or `tsc FILE_NAME.ts --watch`. Once saving the file, compiling TS file into JS file starts.
