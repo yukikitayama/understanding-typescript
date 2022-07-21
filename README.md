@@ -78,6 +78,12 @@ Interface can inherit multipled interfaces, but class can inherit only one inter
 
 2 ways exist; `<TYPE>TYPESCRIP_CODE` or `TYPESCRIPT_CODE as TYPE`. Use the 2nd way if type casting is used in React, otherwise starting code with `<` will crash with JSX code.
 
+## Generic
+
+**Generic type** always comes with angle brackets `<>`
+
+**Promise type**
+
 ## Compiler
 
 User`tsc FILE_NAME.ts -w` or `tsc FILE_NAME.ts --watch`. Once saving the file, compiling TS file into JS file starts.
