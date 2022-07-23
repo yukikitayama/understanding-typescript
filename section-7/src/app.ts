@@ -24,17 +24,60 @@ interface Lengthy {
 }
 
 function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
-  let descriptionText = 'Got no value.';
+  let descriptionText = "Got no value.";
   if (element.length === 1) {
-    descriptionText = 'Got 1 element.';
-  }
-  else if (element.length > 1) {
-    descriptionText = 'Got ' + element.length + ' elements.';
+    descriptionText = "Got 1 element.";
+  } else if (element.length > 1) {
+    descriptionText = "Got " + element.length + " elements.";
   }
   return [element, descriptionText];
 }
 
-// console.log(countAndDescribe(['Sports', 'Cooking']));
+console.log(countAndDescribe(["Sports", "Cooking"]));
 // console.log(countAndDescribe([]));
-console.log(countAndDescribe(10));
+// console.log(countAndDescribe(10));
 
+function extractAndConvert<T extends object, U extends keyof T>(
+  obj: T,
+  key: U
+) {
+  return "Value: " + obj[key];
+}
+
+console.log(extractAndConvert({ name: "Max" }, "name"));
+
+class DataStorage<T extends string | number | boolean> {
+  private data: T[] = [];
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  removeItem(item: T) {
+    if (this.data.indexOf(item) === -1) {
+      return;
+    }
+    this.data.splice(this.data.indexOf(item), 1);
+  }
+
+  getItems() {
+    return [...this.data];
+  }
+}
+
+const textStorage = new DataStorage<string>();
+textStorage.addItem("Max");
+textStorage.addItem("Yuki");
+textStorage.addItem("Kita");
+textStorage.removeItem("Yuki");
+console.log(textStorage.getItems());
+
+const numberStorage = new DataStorage<number>();
+
+// const objStorage = new DataStorage<object>();
+// const maxObj = { name: "Yuki" };
+// objStorage.addItem(maxObj);
+// objStorage.addItem({ name: "Max" });
+// // ...
+// objStorage.removeItem(maxObj);
+// console.log(objStorage.getItems());
