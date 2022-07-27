@@ -6,6 +6,10 @@ JavaScript is **dynamically typed**, which means that we can have a variable ini
 
 TypeScript is **statically typed**, which means that we define the type of a variable during development, and the type doesn't change at runtime. **TypeScript uses static types (set during development)**.
 
+## Topic I don't understand
+
+- Generic
+
 ## Benefit
 
 - As being a developer, you can expect what data type you want to use in your code. But when the app is used by users, or your code is maintained by the team, unexpected use of data type occurs and break the app.
@@ -180,3 +184,8 @@ console.log(userName, age);
 
 `Ctrl + Space` to get auto completion.
 
+## Decorator
+
+- A function applied to something like class
+- Decorator typically starts with a capital letter.
+- Decorator runs when a class is defined, not when instantiated.
