@@ -123,6 +123,22 @@ Complied `include` - `exclude` (minus) files.
 
 `"sourceMap": true` allows us to debug TypeScript code in browser.
 
+## Modular code
+
+Modular code means splitting our code into multiple files so that each file stays manageable and maintainable, and import and export those files to be connected.
+
+### Namespace
+
+Grouping code. Bundle files to have less imports.
+
+### ES6 modules
+
+Use ES6 import/export syntax, which is supported in TypeScript. 
+
+Need ***Webpack* to bundle.
+
+Use `import { something } from "./something.js"` syntax. This is a recommended approach because it's safer and warned in IDE before compiling.
+
 ## JavaScript
 
 `let` and `const` are **block scope** in `{ }`. These are available only in the block we define or the lower blocks.
