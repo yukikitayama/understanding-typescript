@@ -139,6 +139,14 @@ Need ***Webpack* to bundle.
 
 Use `import { something } from "./something.js"` syntax. This is a recommended approach because it's safer and warned in IDE before compiling.
 
+## Webpack
+
+A bundling and build orchestration tool. It helps us reduce the amount of HTTP requests for JavaScript files by bundling code together.
+
+When you have multiple TypeScript file in a project, and they imports functions and constants from each other, every time HTTP requests occurr, which slows down user experience. Unoptimized code, which can be done by Webpack.
+
+`$ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
+
 ## JavaScript
 
 `let` and `const` are **block scope** in `{ }`. These are available only in the block we define or the lower blocks.
