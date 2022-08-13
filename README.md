@@ -147,6 +147,8 @@ When you have multiple TypeScript file in a project, and they imports functions 
 
 `$ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
 
+Webpack uses NodeJS to execute files.
+
 ## JavaScript
 
 `let` and `const` are **block scope** in `{ }`. These are available only in the block we define or the lower blocks.
