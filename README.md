@@ -149,6 +149,20 @@ When you have multiple TypeScript file in a project, and they imports functions 
 
 Webpack uses NodeJS to execute files.
 
+## JavaScript third-party libraries
+
+The libraries which are only built for JavaScript so get errors if we use in TypeScript files
+
+`@types/something` has translation from plain JavaScript to TypeScript, which doesn't contain any logics, but defines types.
+
+`npm install --save-dev @types/something`.
+
+As soon as installing the `@types/something`, errors will be gone.
+
+https://github.com/typestack/class-transformer
+
+https://github.com/typestack/class-validator
+
 ## JavaScript
 
 `let` and `const` are **block scope** in `{ }`. These are available only in the block we define or the lower blocks.
