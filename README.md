@@ -229,3 +229,31 @@ console.log(userName, age);
 - A function applied to something like class
 - Decorator typically starts with a capital letter.
 - Decorator runs when a class is defined, not when instantiated.
+
+## React
+
+Forward a function with an argument through `props`, and use `props.FUNCTION.bind(null, argument)`
+
+```
+// In one component
+const func = (arg: string) => {
+  do something with arg.
+};
+
+return (
+  <Component onFunc={func}>
+);
+
+// In the other component
+const OtherComponent: React.FC<{onFunc: (arg: string) => void}}> = (props) => {
+  return (
+    <SomeComponent onClick={props.onFunc.bind(null, ARGUMENT)}>
+  );
+}
+```
+
+## React Router
+
+`npm install --save react-router-dom`
+
+`npm install --save-dev @types/react-router-dom`
