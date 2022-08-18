@@ -257,3 +257,15 @@ const OtherComponent: React.FC<{onFunc: (arg: string) => void}}> = (props) => {
 `npm install --save react-router-dom`
 
 `npm install --save-dev @types/react-router-dom`
+
+## NodeJS
+
+https://github.com/TypeStrong/ts-node
+
+`npm init` to get `package.json`
+
+`tsc --init` to get `tsconfig.json` and to initialize as TypeScript project.
+
+`npm install --save-dev @types/node`
+
+`npm install --save-dev @types/express`
